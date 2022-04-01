@@ -7,6 +7,14 @@
 
 import UIKit
 
+protocol LogoutDelegate: AnyObject {
+    func didLogout()
+}
+
+protocol LoginViewControllerDelegate: AnyObject {
+    func didLogin()
+}
+
 class LoginViewController: UIViewController {
 
     let titleLabel = UILabel()
@@ -14,6 +22,8 @@ class LoginViewController: UIViewController {
     let loginView = LoginView()
     let signInButton = UIButton(type: .system)
     let errorMessageLabel = UILabel()
+    
+    weak var delegate: LoginViewControllerDelegate?
     
     var username: String? {
         return loginView.userNameTextField.text
@@ -27,6 +37,10 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         style()
         layout()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        signInButton.configuration?.showsActivityIndicator = false
     }
 }
 
@@ -52,7 +66,7 @@ extension LoginViewController {
         signInButton.configuration = .filled()
         signInButton.configuration?.imagePadding = 8
         signInButton.setTitle("Sign In", for: [])
-        signInButton.addTarget(self, action: #selector(signInTapped(sender:)), for: .primaryActionTriggered)
+        signInButton.addTarget(self, action: #selector(signInTapped), for: .primaryActionTriggered)
         
         errorMessageLabel.translatesAutoresizingMaskIntoConstraints = false
         errorMessageLabel.textAlignment = .center
@@ -116,13 +130,14 @@ extension LoginViewController {
                   return
               }
         
-        if username.isEmpty || password.isEmpty {
-            configureView(withMessage: "Username / password cannot be blank")
-            return
-        }
+//        if username.isEmpty || password.isEmpty {
+//            configureView(withMessage: "Username / password cannot be blank")
+//            return
+//        }
         
-        if username == "Giovane" && password == "welcome" {
+        if username == "" && password == "" {
             signInButton.configuration?.showsActivityIndicator = true
+            delegate?.didLogin()
         } else {
             configureView(withMessage: "Incorrect username / password")
         }
