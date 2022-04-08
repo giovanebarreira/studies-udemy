@@ -22,6 +22,8 @@
 		23A113DE27F71C9400056082 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A113DD27F71C9400056082 /* OnboardingViewController.swift */; };
 		23A3DBF628005093009B28EC /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A3DBF528005093009B28EC /* Date+Utils.swift */; };
 		23A3DBF828005167009B28EC /* AccountSummaryVieController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A3DBF728005167009B28EC /* AccountSummaryVieController+Networking.swift */; };
+		23A3DBFC28005F0E009B28EC /* ProfileTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A3DBFB28005F0E009B28EC /* ProfileTest.swift */; };
+		23A3DBFE2800600F009B28EC /* AccountTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A3DBFD2800600F009B28EC /* AccountTest.swift */; };
 		23DA979427FF043A001B758C /* ShakeyBellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DA979327FF043A001B758C /* ShakeyBellView.swift */; };
 		23E8A69627F5BEC4005473F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E8A69527F5BEC4005473F3 /* AppDelegate.swift */; };
 		23E8A69A27F5BEC4005473F3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E8A69927F5BEC4005473F3 /* LoginViewController.swift */; };
@@ -60,6 +62,8 @@
 		23A113DD27F71C9400056082 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		23A3DBF528005093009B28EC /* Date+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
 		23A3DBF728005167009B28EC /* AccountSummaryVieController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSummaryVieController+Networking.swift"; sourceTree = "<group>"; };
+		23A3DBFB28005F0E009B28EC /* ProfileTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTest.swift; sourceTree = "<group>"; };
+		23A3DBFD2800600F009B28EC /* AccountTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTest.swift; sourceTree = "<group>"; };
 		23DA979327FF043A001B758C /* ShakeyBellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeyBellView.swift; sourceTree = "<group>"; };
 		23E8A69227F5BEC4005473F3 /* Bankey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bankey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E8A69527F5BEC4005473F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,7 +126,8 @@
 		2314B3FF27FE0A0B00E80193 /* BankeyTests */ = {
 			isa = PBXGroup;
 			children = (
-				2314B40827FE0A9600E80193 /* CurrencyFormatterTest.swift */,
+				23A3DBFA28005EFD009B28EC /* AccountSummary */,
+				23A3DBF928005EF4009B28EC /* Utils */,
 			);
 			path = BankeyTests;
 			sourceTree = "<group>";
@@ -149,6 +154,23 @@
 				23A113DD27F71C9400056082 /* OnboardingViewController.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		23A3DBF928005EF4009B28EC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2314B40827FE0A9600E80193 /* CurrencyFormatterTest.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		23A3DBFA28005EFD009B28EC /* AccountSummary */ = {
+			isa = PBXGroup;
+			children = (
+				23A3DBFB28005F0E009B28EC /* ProfileTest.swift */,
+				23A3DBFD2800600F009B28EC /* AccountTest.swift */,
+			);
+			path = AccountSummary;
 			sourceTree = "<group>";
 		};
 		23DA979227FF0406001B758C /* Components */ = {
@@ -315,6 +337,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2314B40927FE0A9600E80193 /* CurrencyFormatterTest.swift in Sources */,
+				23A3DBFE2800600F009B28EC /* AccountTest.swift in Sources */,
+				23A3DBFC28005F0E009B28EC /* ProfileTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
