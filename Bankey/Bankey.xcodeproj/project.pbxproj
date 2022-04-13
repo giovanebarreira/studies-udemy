@@ -18,6 +18,8 @@
 		2314B40F27FE25BC00E80193 /* UITextfield+SecureToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2314B40E27FE25BC00E80193 /* UITextfield+SecureToggle.swift */; };
 		234CF14527F78AE200596329 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234CF14427F78AE200596329 /* DummyViewController.swift */; };
 		234CF14827F78FB100596329 /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234CF14727F78FB100596329 /* LocalState.swift */; };
+		2361BCC12806EB8D0079B48B /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2361BCC02806EB8D0079B48B /* ProfileManager.swift */; };
+		2361BCC32806ED250079B48B /* AccountSummaryViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2361BCC22806ED240079B48B /* AccountSummaryViewControllerTest.swift */; };
 		239D956F2804438800B45DAC /* SkeletonLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239D956E2804438800B45DAC /* SkeletonLoadable.swift */; };
 		239D95712804441500B45DAC /* SkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239D95702804441500B45DAC /* SkeletonCell.swift */; };
 		23A113DC27F7164F00056082 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A113DB27F7164F00056082 /* OnboardingContainerViewController.swift */; };
@@ -60,6 +62,8 @@
 		2314B40E27FE25BC00E80193 /* UITextfield+SecureToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextfield+SecureToggle.swift"; sourceTree = "<group>"; };
 		234CF14427F78AE200596329 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 		234CF14727F78FB100596329 /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
+		2361BCC02806EB8D0079B48B /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		2361BCC22806ED240079B48B /* AccountSummaryViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewControllerTest.swift; sourceTree = "<group>"; };
 		239D956E2804438800B45DAC /* SkeletonLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLoadable.swift; sourceTree = "<group>"; };
 		239D95702804441500B45DAC /* SkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonCell.swift; sourceTree = "<group>"; };
 		23A113DB27F7164F00056082 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 		230B32F927FC543A00FC5048 /* AccountSummary */ = {
 			isa = PBXGroup;
 			children = (
+				2361BCBF2806EB700079B48B /* Networking */,
 				230B32FA27FC545100FC5048 /* AccountSummaryViewController.swift */,
 				23A3DBF728005167009B28EC /* AccountSummaryViewController+Networking.swift */,
 				2314B3F327FDA93300E80193 /* Header */,
@@ -153,6 +158,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		2361BCBF2806EB700079B48B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2361BCC02806EB8D0079B48B /* ProfileManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		23A113DA27F7163400056082 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +188,7 @@
 			children = (
 				23A3DBFB28005F0E009B28EC /* ProfileTest.swift */,
 				23A3DBFD2800600F009B28EC /* AccountTest.swift */,
+				2361BCC22806ED240079B48B /* AccountSummaryViewControllerTest.swift */,
 			);
 			path = AccountSummary;
 			sourceTree = "<group>";
@@ -345,6 +359,7 @@
 				2314B40927FE0A9600E80193 /* CurrencyFormatterTest.swift in Sources */,
 				23A3DBFE2800600F009B28EC /* AccountTest.swift in Sources */,
 				23A3DBFC28005F0E009B28EC /* ProfileTest.swift in Sources */,
+				2361BCC32806ED250079B48B /* AccountSummaryViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +373,7 @@
 				2314B40F27FE25BC00E80193 /* UITextfield+SecureToggle.swift in Sources */,
 				23FACB4327FB058500543784 /* UIViewController+Utils.swift in Sources */,
 				23E8A6AC27F5C1CC005473F3 /* LoginView.swift in Sources */,
+				2361BCC12806EB8D0079B48B /* ProfileManager.swift in Sources */,
 				2314B3F927FDC5EE00E80193 /* CurrencyFormatter.swift in Sources */,
 				234CF14827F78FB100596329 /* LocalState.swift in Sources */,
 				234CF14527F78AE200596329 /* DummyViewController.swift in Sources */,
