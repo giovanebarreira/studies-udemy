@@ -113,7 +113,7 @@ extension PasswordTextField {
         //CHCR - Content Hugging and Content Compression Resistance
         lockImageView.setContentHuggingPriority(UILayoutPriority.defaultHigh, for: .horizontal)
         textField.setContentHuggingPriority(UILayoutPriority.defaultLow, for: .horizontal)
-        eyeButton.setContentHuggingPriority(UILayoutPriority.defaultLow, for: .horizontal)
+        eyeButton.setContentHuggingPriority(UILayoutPriority.defaultHigh, for: .horizontal)
     }
 }
 
