@@ -12,6 +12,7 @@
 		235DFFF7280ECF1800B6140E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235DFFF6280ECF1800B6140E /* ViewController.swift */; };
 		235DFFFC280ECF1900B6140E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 235DFFFB280ECF1900B6140E /* Assets.xcassets */; };
 		235DFFFF280ECF1900B6140E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235DFFFD280ECF1900B6140E /* LaunchScreen.storyboard */; };
+		23E0C33B28102C5D00161312 /* PasswordCriteriaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E0C33A28102C5D00161312 /* PasswordCriteriaView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		235DFFF6280ECF1800B6140E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		235DFFFB280ECF1900B6140E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		235DFFFE280ECF1900B6140E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		23E0C33A28102C5D00161312 /* PasswordCriteriaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCriteriaView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 		235D0006280ECF8C00B6140E /* Files */ = {
 			isa = PBXGroup;
 			children = (
+				235DFFF2280ECF1800B6140E /* AppDelegate.swift */,
 				235DFFFB280ECF1900B6140E /* Assets.xcassets */,
 				235DFFFD280ECF1900B6140E /* LaunchScreen.storyboard */,
 				235D0000280ECF1900B6140E /* Info.plist */,
@@ -65,11 +68,19 @@
 			isa = PBXGroup;
 			children = (
 				235D0006280ECF8C00B6140E /* Files */,
-				235DFFF2280ECF1800B6140E /* AppDelegate.swift */,
 				235DFFF6280ECF1800B6140E /* ViewController.swift */,
 				235D0007280ED2A700B6140E /* PasswordTextField.swift */,
+				23E0C33928102C4200161312 /* PasswordStatusView */,
 			);
 			path = PasswordValidator;
+			sourceTree = "<group>";
+		};
+		23E0C33928102C4200161312 /* PasswordStatusView */ = {
+			isa = PBXGroup;
+			children = (
+				23E0C33A28102C5D00161312 /* PasswordCriteriaView.swift */,
+			);
+			name = PasswordStatusView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +155,7 @@
 			files = (
 				235DFFF7280ECF1800B6140E /* ViewController.swift in Sources */,
 				235DFFF3280ECF1800B6140E /* AppDelegate.swift in Sources */,
+				23E0C33B28102C5D00161312 /* PasswordCriteriaView.swift in Sources */,
 				235D0008280ED2A700B6140E /* PasswordTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

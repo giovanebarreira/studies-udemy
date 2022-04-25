@@ -107,7 +107,6 @@ extension PasswordTextField {
             errorLabel.topAnchor.constraint(equalToSystemSpacingBelow: dividerView.bottomAnchor, multiplier: 0.5),
             errorLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
             errorLabel.trailingAnchor.constraint(equalTo: trailingAnchor)
-            
         ])
         
         //CHCR - Content Hugging and Content Compression Resistance
