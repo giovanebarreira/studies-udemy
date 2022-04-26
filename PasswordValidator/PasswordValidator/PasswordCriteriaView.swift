@@ -52,9 +52,7 @@ class PasswordCriteriaView: UIView {
 
 extension PasswordCriteriaView {
     
-    func style() {
-        backgroundColor = .secondarySystemBackground
-        
+    func style() {        
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .horizontal
         stackView.spacing = 8
