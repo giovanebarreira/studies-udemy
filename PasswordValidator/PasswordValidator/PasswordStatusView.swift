@@ -20,8 +20,8 @@ class PasswordStatusView: UIView {
     let digitCriteriaView = PasswordCriteriaView(text: "digit (0-9)")
     let specialCharacterCriteriaView = PasswordCriteriaView(text: "special character (e.g. !@#$%^)")
     
-    //Used to determine if we reset criteria back to empty state
-    private var shouldResetCriteria: Bool = true
+    // Used to determine if we reset criteria back to empty state (⚪️).
+    var shouldResetCriteria: Bool = true
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -103,7 +103,7 @@ extension PasswordStatusView {
         let specialCharacterMet = PasswordCriteria.specialCharacterMet(text)
         
         if shouldResetCriteria {
-            // inline validation
+            // inline validation (✅ or ⚪️)
             lengthAndNoSpaceMet
             ? lengthCriteriaView.isCriteriaMet = true
             : lengthCriteriaView.reset()
@@ -123,6 +123,39 @@ extension PasswordStatusView {
             specialCharacterMet
             ? specialCharacterCriteriaView.isCriteriaMet = true
             : specialCharacterCriteriaView.reset()
+        } else {
+            // Focus lost (✅ or ❌)
+            lengthCriteriaView.isCriteriaMet = lengthAndNoSpaceMet
+            uppercaseCriteriaView.isCriteriaMet = uppercaseMet
+            lowerCaseCriteriaView.isCriteriaMet = lowercaseMet
+            digitCriteriaView.isCriteriaMet = digitMet
+            specialCharacterCriteriaView.isCriteriaMet = specialCharacterMet
         }
+    }
+    
+    func validate(_ text: String) -> Bool {
+        let uppercaseMet = PasswordCriteria.uppercaseMet(text)
+        let lowercaseMet = PasswordCriteria.lowercaseMet(text)
+        let digitMet = PasswordCriteria.digitMet(text)
+        let specialCharacterMet = PasswordCriteria.specialCharacterMet(text)
+
+        // Check for 3 of 4 criteria
+        let checkable = [uppercaseMet, lowercaseMet, digitMet, specialCharacterMet]
+        let metCriteria = checkable.filter{ $0 }
+        let lengthAndNoSpaceMet = PasswordCriteria.lengthAndNoSpaceMet(text)
+        
+        if lengthAndNoSpaceMet && metCriteria.count >= 3 {
+            return true
+        }
+        
+        return false
+    }
+    
+    func reset() {
+        lengthCriteriaView.reset()
+        uppercaseCriteriaView.reset()
+        lowerCaseCriteriaView.reset()
+        digitCriteriaView.reset()
+        specialCharacterCriteriaView.reset()
     }
 }
