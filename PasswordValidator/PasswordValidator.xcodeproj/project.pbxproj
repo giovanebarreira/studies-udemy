@@ -13,6 +13,7 @@
 		235DFFF7280ECF1800B6140E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235DFFF6280ECF1800B6140E /* ViewController.swift */; };
 		235DFFFC280ECF1900B6140E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 235DFFFB280ECF1900B6140E /* Assets.xcassets */; };
 		235DFFFF280ECF1900B6140E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235DFFFD280ECF1900B6140E /* LaunchScreen.storyboard */; };
+		2376E075282930E90023B673 /* UIResponder+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2376E074282930E90023B673 /* UIResponder+Utils.swift */; };
 		23E0C33B28102C5D00161312 /* PasswordCriteriaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E0C33A28102C5D00161312 /* PasswordCriteriaView.swift */; };
 		23F0B6F62816C2BF0045FD99 /* PasswordStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F0B6F52816C2BF0045FD99 /* PasswordStatusView.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +27,7 @@
 		235DFFF6280ECF1800B6140E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		235DFFFB280ECF1900B6140E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		235DFFFE280ECF1900B6140E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2376E074282930E90023B673 /* UIResponder+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Utils.swift"; sourceTree = "<group>"; };
 		23E0C33A28102C5D00161312 /* PasswordCriteriaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCriteriaView.swift; sourceTree = "<group>"; };
 		23F0B6F52816C2BF0045FD99 /* PasswordStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordStatusView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,12 +73,21 @@
 		235DFFF1280ECF1800B6140E /* PasswordValidator */ = {
 			isa = PBXGroup;
 			children = (
+				2376E073282930CD0023B673 /* Utils */,
 				235D0006280ECF8C00B6140E /* Files */,
 				235DFFF6280ECF1800B6140E /* ViewController.swift */,
 				235D0007280ED2A700B6140E /* PasswordTextField.swift */,
 				23E0C33928102C4200161312 /* PasswordStatusView */,
 			);
 			path = PasswordValidator;
+			sourceTree = "<group>";
+		};
+		2376E073282930CD0023B673 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2376E074282930E90023B673 /* UIResponder+Utils.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		23E0C33928102C4200161312 /* PasswordStatusView */ = {
@@ -160,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				235DFFF7280ECF1800B6140E /* ViewController.swift in Sources */,
+				2376E075282930E90023B673 /* UIResponder+Utils.swift in Sources */,
 				2318A6A928214E45002EC3FD /* PasswordCriteria.swift in Sources */,
 				235DFFF3280ECF1800B6140E /* AppDelegate.swift in Sources */,
 				23E0C33B28102C5D00161312 /* PasswordCriteriaView.swift in Sources */,
