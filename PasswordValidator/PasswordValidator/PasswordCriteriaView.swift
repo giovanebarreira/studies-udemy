@@ -16,7 +16,7 @@ class PasswordCriteriaView: UIView {
     
     let checkmarkImage = UIImage(systemName: "checkmark.circle")!.withTintColor(.systemGreen, renderingMode: .alwaysOriginal)
     let xmarkImage = UIImage(systemName: "xmark.circle")!.withTintColor(.systemRed, renderingMode: .alwaysOriginal)
-    let cicleImage = UIImage(systemName: "circle")!.withTintColor(.tertiaryLabel, renderingMode: .alwaysOriginal)
+    let circleImage = UIImage(systemName: "circle")!.withTintColor(.tertiaryLabel, renderingMode: .alwaysOriginal)
     
     var isCriteriaMet: Bool = false {
         didSet {
@@ -46,7 +46,7 @@ class PasswordCriteriaView: UIView {
     
     func reset() {
         isCriteriaMet = false
-        imageView.image = cicleImage
+        imageView.image = circleImage
     }
 }
 
@@ -58,7 +58,7 @@ extension PasswordCriteriaView {
         stackView.spacing = 8
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = cicleImage
+        imageView.image = circleImage
         
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .preferredFont(forTextStyle: .subheadline)
